@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clone Stamp Tool</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu">
+        <button class="button">New Project</button>
+        <button class="button">Recent Projects</button>
+    </div>
+    <div class="toolbar">
+        <input type="file" id="imageInput" accept="image/*">
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <button class="button" onclick="toggleCloneStamp()">Clone Stamp</button>
+        <button class="button" onclick="toggleEraser()">Eraser</button>
+        <button class="button" onclick="undo()">Undo</button>
+        <button class="button" onclick="redo()">Redo</button>
+        <button class="button" id="brushButton">Brush</button>
+        <select id="brushShape">
+            <option value="circle">Circle</option>
+            <option value="square">Square</option>
+        </select>
+        <input type="color" id="brushColor">
+        <input type="range" id="brushSize" min="1" max="50" value="10">
+        <input type="range" id="brushOpacity" min="0" max="1" step="0.1" value="1">
+        <button class="button" onclick="downloadImage()">Download Image</button>
+        <input type="text" id="pasteUrlInput" placeholder="Paste Image URL">
+        <button class="button" onclick="pasteImageUrl()">Paste URL</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
